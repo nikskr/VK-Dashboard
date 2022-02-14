@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VK Dashboard</title>
+    <link rel="stylesheet" href="./scss/index.scss">
+</head>
+<body>
+    <div class="app">
+        <nav class="nav">
+            <img src="assets/nav/logo.png" alt="logo" class="nav__logo">
+            <ul class="nav__links">
+
+                <li class="nav__item"><a href="" class="nav__link"><img src="assets/nav/home.svg" alt="home" class="nav__link-image"></a></li>
+                <li class="nav__item"><a href="" class="nav__link"><img src="assets/nav/note.svg" alt="notes" class="nav__link-image"></a></li>
+                <li class="nav__item"><a href="" class="nav__link"><img src="assets/nav/friends.svg" alt="friends" class="nav__link-image"></a></li>
+                <li class="nav__item"><a href="" class="nav__link"><img src="assets/nav/mails.svg" alt="mails" class="nav__link-image"></a></li>
+                <li class="nav__item"><a href="" class="nav__link"><img src="assets/nav/audio.svg" alt="audio" class="nav__link-image"></a></li>
+                <li class="nav__item"><a href="" class="nav__link"><img src="assets/nav/statistics.svg" alt="statistics" class="nav__link-image"></a></li>
+                <li class="nav__item"><a href="" class="nav__link"><img src="assets/nav/settings.svg" alt="settings" class="nav__link-image"></a></li>
+            </ul>
+            <button class="nav__mode-btn"><img src="assets/nav/tumbler.png" alt="tumbler" class="nav__tumbler"></button>
+        </nav>
+        <header class="header">
+            <h1 class="header__title">Statistics</h1>
+            <div class="header__search-form">
+                <input type="text" class="header__search" placeholder="Search">
+                <button class="header__notifications"><img src="assets/header/notifications.png" alt="notifications" class="header__notifications-image"> </button>
+            </div>
+            <div class="header__account">
+                <p class="header__account-name">Anya</p>
+                <img src="assets/header/photo.png" alt="account-photo" class="header__account-photo">
+                <button class="header__dropdown-btn"><img src="assets/header/dropdown.png" alt="dropdown-btn" class="dropdown-btn"></button>
+            </div>
+        </header>
+        <main class="main">
+            <div class="cards">
+                <div class="card">
+                    <h2 class="card__title">Friends</h2>
+                    <button class="card__menu"><img src="assets/main/menu.png" alt="menu" class="card__statistic-direction--up"></button>
+                    <p class="card__info">271 people</p>
+                    <div class="card__statistic"><span class="card__statistic-text">+ 0,7%</span>
+                        <img src="assets/main/arrow-up.png" alt="arrow-up" class="card__statistic-direction--up">
+                    </div>
+                </div>
+                <div class="card">
+                    <h2 class="card__title">Unique visitors</h2>
+                    <button class="card__menu"><img src="assets/main/menu.png" alt="menu" class="card__statistic-direction--up"></button>
+                    <p class="card__info">69 people</p>
+                    <div class="card__statistic"><span class="card__statistic-text">- 1,7%</span>
+                        <img src="assets/main/arrow-down.png" alt="arrow-down" class="card__statistic-direction--down">
+                    </div>
+                </div>
+                <div class="card">
+                    <h2 class="card__title">Followers</h2>
+                    <button class="card__menu"><img src="assets/main/menu.png" alt="menu" class="card__statistic-direction--up"></button>
+                    <p class="card__info">288 people</p>
+                    <div class="card__statistic"><span class="card__statistic-text"> + 1%</span>
+                        <img src="assets/main/arrow-up.png" alt="arrow-up" class="card__statistic-direction--up">
+                    </div>
+                </div>
+            </div>
+            <div class="graph">
+                <h2 class="card__title">Audience reach</h2>
+                <div class="graph__dates">
+                    <input type="date" name="begin-time" id="begin-time" class="graph__date">
+                    <span class="graph__dates-dash"> - </span>
+                    <input type="date" name="end-time" id="end-time" class="graph__date">
+                </div>
+                <div class="graph__checkbox">
+                    <input type="checkbox" name="total" id="total">
+                    <label for="total">Total</label>
+                    <input type="checkbox" name="follower" id="follower">
+                    <label for="follower">Follower</label>
+                </div>
+                <img src="assets/main/graph.png" alt="graph" class="graph__image">
+            </div>
+            <div class="diagram">
+                <h2 class="card__title">Reach by device</h2>
+                <img src="assets/main/diagram.png" alt="diagram" class="diagram__image">
+                <div class="diagram__graph-name-container">
+                    <div class="diagram__graph-name">
+                        <img src="assets/main/pink-marker.png" alt="pink-marker" class="graph-name__sign">
+                        <span class="graph-name__text">Desktop</span>
+                    </div>
+                    <div class="diagram__graph-name">
+                        <img src="assets/main/purple-marker.png" alt="purple-marker" class="graph-name__sign">
+                        <span class="graph-name__text">Mobile views</span>
+                    </div>
+                </div>
+            </div>
+            <div class="histogram">
+                <h2 class="card__title histogram__title">Gender / Age</h2>
+                <div class="histogram__graph-name-container">
+                    <div class="histogram__graph-name histogram__women">
+                        <img src="assets/main/pink-marker.png" alt="pink-marker" class="histogram__graph-name__sign">
+                        <span class="histogram__graph-name__text">women</span>
+                    </div>
+                    <div class="histogram__graph-name histogram__men">
+                        <img src="assets/main/purple-marker.png" alt="purple-marker" class="histogram__graph-name__sign">
+                        <span class="histogram__graph-name__text">men</span>
+                    </div>  
+                </div>
+                <img src="assets/main/histogram.png" alt="histograms" class="histogram__image">
+            </div>
+            <div class="location">
+                <h2 class="card__title location__title">Geo</h2>
+                <div class="location__select">
+                    <button class="location__btn--active">Country</button>
+                    <span class='location__dash'> / </span>
+                    <button class="location__btn--passive">City</button>
+                </div>
+                <img src="assets/main/geo-statistic.png" alt="geo-statistic" class="location__image">
+            </div>
+        </main>
+    </div>
+</body>
+</html>
