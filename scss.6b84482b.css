@@ -1,0 +1,268 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: #FDFDFF;
+}
+
+.app {
+  display: grid;
+  background-color: #EFF3F9;
+  grid-template-columns: 100px 1fr;
+  grid-template-rows: 120px 1fr;
+  grid-template-areas: "nav header" "nav main";
+  max-width: 1280px;
+  min-height: 880px;
+  margin: 50px auto;
+  border: 1px solid black;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.nav {
+  padding: 50px 0px;
+  grid-area: nav;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 14px 0 0 14px;
+  background-color: grey;
+}
+.nav__logo {
+  width: 40px;
+  height: 25px;
+}
+.nav__item {
+  padding: 5px;
+  margin-bottom: 15px;
+}
+.nav__link {
+  cursor: pointer;
+}
+.nav__mode-btn {
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+}
+
+.header {
+  grid-area: header;
+  display: grid;
+  grid-template-columns: 150px 250px 1fr;
+  grid-template-areas: "title search account";
+  align-items: center;
+  padding: 20px 50px;
+  border-radius: 0 14px 0 0;
+}
+.header__title {
+  grid-area: title;
+}
+.header__search-form {
+  grid-area: search;
+  align-self: center;
+}
+.header__search {
+  height: 30px;
+  padding: 10px 10px;
+  border-radius: 14px;
+  border: 1px solid #EBEBEB;
+  margin-right: 30px;
+}
+.header__search::placeholder {
+  color: #EBEBEB;
+}
+.header__notifications {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.header__account {
+  grid-area: account;
+  display: grid;
+  grid-template-areas: "account-name photo btn";
+  grid-gap: 10px;
+  justify-self: end;
+  align-items: center;
+}
+.header__account-photo {
+  background: white;
+  border-radius: 35px;
+  cursor: pointer;
+}
+.header__dropdown-btn {
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+}
+
+.main {
+  padding: 10px 50px 50px;
+  grid-area: main;
+  border-radius: 0 0 14px 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(290, 1fr));
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas: "cards cards cards" "graph graph diagram" "histogram histogram location";
+  grid-gap: 32px;
+}
+
+.cards {
+  grid-area: cards;
+  display: grid;
+  grid-template-columns: repeat(3, 340px);
+  grid-gap: 32px;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "title btn" "info statistic";
+  padding: 25px;
+  border: 1px solid #EBEBEB;
+  border-radius: 14px;
+  border: 1px solid #EBEBEB;
+  background-color: #FFF;
+}
+.card__menu {
+  align-self: start;
+  background: inherit;
+  border: none;
+  cursor: pointer;
+}
+.card__statistic-text {
+  margin-right: 10px;
+}
+
+.graph {
+  grid-area: graph;
+  display: grid;
+  grid-template-columns: 1fr 200px 150px;
+  grid-template-areas: "title dates checkbox" "graph graph graph";
+  border-radius: 14px;
+  padding: 25px;
+  align-items: center;
+  grid-gap: 25px;
+  background-color: #FFF;
+  border: 1px solid #EBEBEB;
+}
+.graph__dates {
+  align-self: center;
+  grid-area: dates;
+  display: flex;
+  margin-right: 30px;
+}
+.graph__dates-dash {
+  margin: 0 5px;
+}
+.graph__date {
+  border-radius: 14px;
+  padding: 0px 5px;
+}
+.graph__checkbox {
+  grid-area: checkbox;
+}
+.graph__image {
+  grid-area: graph;
+  width: 100%;
+}
+
+.diagram {
+  padding: 25px;
+  grid-area: diagram;
+  display: grid;
+  grid-template-areas: "title title" "img features";
+  border-radius: 14px;
+  background-color: #FFF;
+  border: 1px solid #EBEBEB;
+}
+.diagram__image {
+  grid-area: img;
+}
+.diagram__graph-name-container {
+  grid-area: features;
+}
+.diagram__graph-name {
+  margin-bottom: 10px;
+}
+
+.histogram {
+  padding: 25px;
+  grid-area: histogram;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "title checkbox" "graph graph";
+  border-radius: 14px;
+  align-items: center;
+  background-color: #FFF;
+  border: 1px solid #EBEBEB;
+}
+.histogram__graph-name-container {
+  grid-area: checkbox;
+  display: grid;
+  grid-template-areas: "women men";
+  grid-gap: 20px;
+}
+.histogram__title {
+  margin-bottom: 20px;
+}
+.histogram____graph-name {
+  display: flex;
+}
+.histogram__graph-name__text {
+  align-self: center;
+}
+.histogram__graph-name__sign {
+  align-self: center;
+}
+.histogram__image {
+  grid-area: graph;
+  width: 100%;
+}
+
+.location {
+  padding: 25px;
+  grid-area: location;
+  display: grid;
+  grid-template-areas: "title btns" "graph graph";
+  border-radius: 14px;
+  background-color: #FFF;
+  border: 1px solid #EBEBEB;
+}
+.location__title {
+  grid-area: title;
+}
+.location__select {
+  grid-area: btns;
+}
+.location__image {
+  grid-area: graph;
+}
+.location__select {
+  justify-self: end;
+}
+.location__btn--active {
+  background: inherit;
+  border: none;
+  cursor: pointer;
+}
+.location__btn--passive {
+  background: inherit;
+  border: none;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=/scss.6b84482b.css.map */
